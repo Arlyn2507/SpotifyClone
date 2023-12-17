@@ -1,1 +1,1 @@
-/*Spotify Clone Web App
+Spotify Clone Web App
