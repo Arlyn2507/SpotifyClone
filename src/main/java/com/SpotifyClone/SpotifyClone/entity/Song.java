@@ -14,6 +14,7 @@ public class Song {
 	private String name;
 	private String artist;
 	private String album;
+	
 	public Song(int id, String name, String artist, String album) {
 		super();
 		this.id = id;
@@ -21,35 +22,46 @@ public class Song {
 		this.artist = artist;
 		this.album = album;
 	}
-	
+
 	public Song() {
 		super();
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getArtist() {
 		return artist;
 	}
+
 	public void setArtist(String artist) {
 		this.artist = artist;
 	}
-	
-	public String getALbum() {
+
+	public String getAlbum() {
 		return album;
 	}
+
 	public void setAlbum(String album) {
 		this.album = album;
 	}
+	
+	
+	
+	
 	
 
 }
