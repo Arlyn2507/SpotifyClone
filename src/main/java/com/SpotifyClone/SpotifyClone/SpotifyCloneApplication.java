@@ -1,4 +1,4 @@
-package com.webapp.SpotifyClone;
+package com.SpotifyClone.SpotifyClone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

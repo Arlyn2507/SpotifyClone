@@ -1,8 +1,8 @@
-package com.webapp.SpotifyClone.service;
+package com.SpotifyClone.SpotifyClone.service;
 
 import org.springframework.stereotype.Service;
 
-import com.webapp.SpotifyClone.entity.Song;
+import com.SpotifyClone.SpotifyClone.entity.Song;
 
 @Service
 public class SongService {
