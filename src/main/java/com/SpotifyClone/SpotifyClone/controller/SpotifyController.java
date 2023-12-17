@@ -10,5 +10,13 @@ public class SpotifyController {
 	public String home() {
 		return "home";
 	}
+	
+	@GetMapping("/page1")
+	public String page1() {
+		return "page1";
+	}
+		
+	
+	
 
 }
