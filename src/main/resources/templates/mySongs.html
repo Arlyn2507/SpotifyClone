@@ -55,7 +55,7 @@
 	</nav>
 
 	<div class="container my-5">
-		<table class="table table-hover">
+		<table class="table table-dark">
 			<thead>
 				<tr>
 					<th scope="col">Id</th>
@@ -72,7 +72,6 @@
 			      <td th:text="${s.artist}"></td>
 			      <td th:text="${s.album}"></td> 
       			  <td><a style="color: red" th:href="@{/deleteMyList/{id}(id=${s.id})}"><i class="fa-solid fa-trash"></i></a></td> 
-      			  <td><a><i class="fa-solid fa-play"></i></a></td>
 			</tbody>
 		</table>
 

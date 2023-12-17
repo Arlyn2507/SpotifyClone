@@ -17,6 +17,5 @@ public class MySongListController {
 	public String deleteMyList(@PathVariable("id") int id) {
 		service.deleteById(id);
 		return "redirect:/my_songs";
-		
 	}
 }
