@@ -1,4 +1,4 @@
-package com.SpotifyClone.SpotifyClone.entity;
+package com.webapp.SpotifyClone.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
