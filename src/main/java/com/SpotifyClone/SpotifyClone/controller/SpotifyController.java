@@ -11,9 +11,9 @@ public class SpotifyController {
 		return "home";
 	}
 	
-	@GetMapping("/page1")
-	public String page1() {
-		return "page1";
+	@GetMapping("/song_register")
+	public String songRegister() {
+		return "songRegister";
 	}
 		
 	
