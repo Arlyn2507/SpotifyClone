@@ -16,7 +16,10 @@ public class SpotifyController {
 		return "songRegister";
 	}
 		
-	
+	@GetMapping("/available_songs")
+	public String getAllSongs() {
+		return "songsList";
+	}
 	
 
 }
