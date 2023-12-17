@@ -13,15 +13,17 @@ public class Song {
 	private int id;
 	private String name;
 	private String artist;
-	public Song(int id, String name, String artist) {
+	private String album;
+	public Song(int id, String name, String artist, String album) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.artist = artist;
+		this.album = album;
 	}
+	
 	public Song() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public int getId() {
 		return id;
@@ -42,6 +44,12 @@ public class Song {
 		this.artist = artist;
 	}
 	
+	public String getALbum() {
+		return album;
+	}
+	public void setAlbum(String album) {
+		this.album = album;
+	}
 	
 
 }
