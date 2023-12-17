@@ -24,4 +24,8 @@ public class SongService {
 	public Song getSongById(int id) {
 		return songRepo.findById(id).get();
 	}
+	
+	public void deleteSongById(int id) {
+		songRepo.deleteById(id);
+	}
 }

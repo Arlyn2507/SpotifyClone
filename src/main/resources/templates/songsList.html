@@ -72,8 +72,8 @@
 			      <td th:text="${s.artist}"></td>
 			      <td th:text="${s.album}"></td> 
       			  <td><a class="btn btn-secondary btn-sm" th:href="@{/my_list/{id}(id=${s.id})}">Add To Mybook</a>
-      			  <a style="color: blueviolet"><i class="fa-solid fa-pen-to-square ms-4"></i></a>
-      			  <a style="color: red"><i class="fa-solid fa-trash ms-4"></i></a>
+      			  <a style="color: blueviolet" th:href="@{/editSong/{id}(id=${s.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>
+      			  <a style="color: red" th:href="@{/deleteBook/{id}(id=${s.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
       			  </td> 
 			</tbody>
 		</table>

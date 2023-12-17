@@ -63,7 +63,17 @@ public class SpotifyController {
 		return "redirect:/my_songs";
 	}
 	
+	@RequestMapping("/editSong/{id}")
+	public String editSong(@PathVariable("id") int id, Model model) {
+		Song s = service.getSongById(id);
+		model.addAttribute("song", s);
+		return "songEdit";
+	}
 	
+	@RequestMapping("/deleteBook/{id}")
+	public String deleteSong(@PathVariable("id") int id) {
+		service.deleteSongById(id);
+		return "redirect:/available_songs";
+	}
 	
-
 }
