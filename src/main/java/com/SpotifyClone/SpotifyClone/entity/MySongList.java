@@ -1,21 +1,21 @@
 package com.SpotifyClone.SpotifyClone.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Song {
-	
+@Table(name="MySongs")
+public class MySongList {
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	private int id;
 	private String name;
 	private String artist;
 	private String album;
 	
-	public Song(int id, String name, String artist, String album) {
+	public MySongList(int id, String name, String artist, String album) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -23,7 +23,7 @@ public class Song {
 		this.album = album;
 	}
 
-	public Song() {
+	public MySongList() {
 		super();
 	}
 
@@ -58,5 +58,5 @@ public class Song {
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-
+	
 }

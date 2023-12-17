@@ -20,4 +20,8 @@ public class SongService {
 	public List<Song> getAllSong(){
 		return songRepo.findAll();
 	}
+	
+	public Song getSongById(int id) {
+		return songRepo.findById(id).get();
+	}
 }

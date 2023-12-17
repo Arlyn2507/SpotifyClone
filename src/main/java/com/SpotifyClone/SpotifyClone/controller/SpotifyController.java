@@ -4,12 +4,17 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.SpotifyClone.SpotifyClone.entity.MySongList;
 import com.SpotifyClone.SpotifyClone.entity.Song;
+import com.SpotifyClone.SpotifyClone.service.MySongListService;
 import com.SpotifyClone.SpotifyClone.service.SongService;
 
 @Controller
@@ -17,6 +22,9 @@ public class SpotifyController {
 	
 	@Autowired
 	private SongService service;
+	
+	@Autowired
+	private MySongListService mySongService;
 	
 	@GetMapping("/")
 	public String home() {
@@ -41,8 +49,21 @@ public class SpotifyController {
 	}
 	
 	@GetMapping("/my_songs")
-	public String getMySongs() {
+	public String getMySongs(Model model) {
+		List<MySongList> list = mySongService.getAllMySongs();
+		model.addAttribute("song", list);
 		return "mySongs";
 	}
+	
+	@RequestMapping("/my_list/{id}")
+	public String getMyList(@PathVariable("id") int id) {
+		Song s = service.getSongById(id);
+		MySongList mySongList = new MySongList(s.getId(), s.getName(), s.getArtist(), s.getArtist());
+		mySongService.saveMySong(mySongList);
+		return "redirect:/my_songs";
+	}
+	
+	
+	
 
 }
