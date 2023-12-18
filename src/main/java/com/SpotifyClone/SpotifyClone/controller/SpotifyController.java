@@ -55,11 +55,11 @@ public class SpotifyController {
 		return "mySongs";
 	}
 	
-	@RequestMapping("/my_list/{id}")
+	@RequestMapping("/mylist/{id}")
 	public String getMyList(@PathVariable("id") int id) {
-		Song s = service.getSongById(id);
-		MySongList mySongList = new MySongList(s.getId(), s.getName(), s.getArtist(), s.getArtist());
-		mySongService.saveMySong(mySongList);
+		Song s=service.getSongById(id);
+		MySongList ms=new MySongList(s.getId(),s.getName(),s.getArtist(),s.getAlbum());
+		mySongService.saveMySong(ms);
 		return "redirect:/my_songs";
 	}
 	
