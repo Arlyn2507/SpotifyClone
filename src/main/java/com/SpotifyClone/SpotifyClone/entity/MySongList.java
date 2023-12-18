@@ -25,7 +25,6 @@ public class MySongList {
 		this.album = album;
 	}
 
-
 	public MySongList() {
 		super();
 	}
@@ -70,7 +69,6 @@ public class MySongList {
 		this.album = album;
 	}
 
-	
 }
 
 	
